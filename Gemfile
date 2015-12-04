@@ -9,6 +9,7 @@ gem "jquery-rails"
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "brewery_db"
 gem "ember-cli-rails"
+gem "jsonapi-resources"
 
 group :development do
   gem "dotenv-rails"
