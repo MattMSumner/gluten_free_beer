@@ -8,6 +8,7 @@ gem "coffee-rails", "~> 4.1.0"
 gem "jquery-rails"
 gem "sdoc", "~> 0.4.0", group: :doc
 gem "brewery_db"
+gem "ember-cli-rails"
 
 group :development do
   gem "dotenv-rails"
@@ -15,15 +16,16 @@ end
 
 group :development, :test do
   gem "pry"
+  gem "rspec-rails"
   gem "web-console", "~> 2.0"
   gem "spring"
 end
 
 group :test do
   gem "database_cleaner"
-  gem "rspec-rails"
   gem "shoulda-matchers", require: false
   gem "webmock"
+  gem "climate_control"
 end
 
 group :staging, :production do
