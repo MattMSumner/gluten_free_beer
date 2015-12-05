@@ -1,0 +1,9 @@
+{{#each model as |beer|}}
+  <div>
+    {{#link-to 'beer' beer}}
+      {{beer.nameDisplay}}
+    {{/link-to}}
+  </div>
+{{/each}}
+
+{{outlet}}
