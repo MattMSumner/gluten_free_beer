@@ -19,13 +19,14 @@ ActiveRecord::Schema.define(version: 20151204193026) do
   create_table "beers", force: :cascade do |t|
     t.boolean  "is_organic"
     t.decimal  "abv"
+    t.json     "images"
     t.string   "brewery_db_id"
-    t.string   "style_name"
-    t.string   "style_short_name"
     t.string   "name"
     t.string   "name_display"
-    t.text     "style_description"
+    t.string   "style_name"
+    t.string   "style_short_name"
     t.text     "description"
+    t.text     "style_description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

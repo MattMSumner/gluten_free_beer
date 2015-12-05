@@ -21,6 +21,11 @@ describe BeerFetcher do
         expect(beer.style_description).to eq("Style description")
         expect(beer.style_name).to eq("American-Style India Pale Ale")
         expect(beer.style_short_name).to eq("American IPA")
+        expect(beer.images).to eq(
+          "icon" => "https://fake.com/U8YQ9F/upload_RGReeg-icon.png",
+          "large" => "https://fake.com/U8YQ9F/upload_RGReeg-large.png",
+          "medium" => "https://fake.com/U8YQ9F/upload_RGReeg-medium.png"
+        )
       end
     end
 
@@ -62,12 +67,19 @@ describe BeerFetcher do
       update_date: "2015-04-07 15:26:37"
     })
 
+    labels = BreweryDB::Mash.new({
+      icon: "https://fake.com/U8YQ9F/upload_RGReeg-icon.png",
+      large: "https://fake.com/U8YQ9F/upload_RGReeg-large.png",
+      medium: "https://fake.com/U8YQ9F/upload_RGReeg-medium.png"
+    })
+
     BreweryDB::Mash.new({
       abv: "6.2",
       create_date: "2015-05-20 16:49:41",
       description: "Beer description",
       id: "oDjg7T",
       is_organic: "Y",
+      labels: labels,
       name: "Free Beer",
       name_display: "Free Beer",
       status: "verified",

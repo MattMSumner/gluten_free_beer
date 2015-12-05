@@ -8,5 +8,6 @@ class BeerResource < JSONAPI::Resource
     :style_description,
     :style_name,
     :style_short_name,
-    :is_organic
+    :is_organic,
+    :images
 end

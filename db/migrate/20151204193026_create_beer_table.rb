@@ -3,13 +3,14 @@ class CreateBeerTable < ActiveRecord::Migration
     create_table :beers do |t|
       t.boolean :is_organic
       t.decimal :abv
+      t.json :images
       t.string :brewery_db_id
-      t.string :style_name
-      t.string :style_short_name
       t.string :name
       t.string :name_display
-      t.text :style_description
+      t.string :style_name
+      t.string :style_short_name
       t.text :description
+      t.text :style_description
 
       t.timestamps
     end

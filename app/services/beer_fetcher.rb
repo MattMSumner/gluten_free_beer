@@ -27,6 +27,7 @@ class BeerFetcher
       style_description: beer.style && beer.style.description,
       style_name: beer.style && beer.style.name,
       style_short_name: beer.style && beer.style.short_name,
+      images: beer.labels
     }
   end
 end

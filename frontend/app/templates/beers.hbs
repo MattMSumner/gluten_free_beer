@@ -1,8 +1,20 @@
 {{#each model as |beer|}}
-  <div>
-    {{#link-to 'beer' beer}}
-      {{beer.nameDisplay}}
-    {{/link-to}}
+  <div class="beer">
+    <div class="beer-image">
+      <img src="{{beer.images.icon}}" alt="Logo image">
+    </div>
+
+    <div class="beer-content">
+      <h1>
+        {{#link-to 'beer' beer}}
+          {{beer.nameDisplay}}
+        {{/link-to}}
+      </h1>
+      <p>
+        {{beer.description}}
+      </p>
+      <p class="beer-detail">{{beer.abv}}%</p>
+    </div>
   </div>
 {{/each}}
 
