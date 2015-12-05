@@ -33,3 +33,5 @@ group :staging, :production do
   gem "rails_12factor"
   gem "rails_stdout_logging"
 end
+
+gem 'rails_12factor', group: [:staging, :production]
